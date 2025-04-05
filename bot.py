@@ -11,7 +11,7 @@ load_dotenv(dotenv_path=Path('.env'))
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# Pastikan API Key tidak None
+# Validasi API Key
 if not TELEGRAM_BOT_TOKEN or not OPENAI_API_KEY:
     raise ValueError("API Key untuk Telegram atau OpenAI tidak ditemukan. Periksa file .env")
 
